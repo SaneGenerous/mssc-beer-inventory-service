@@ -16,12 +16,13 @@
  */
 package guru.sfg.beer.inventory.service.domain;
 
+import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
+import jakarta.persistence.Entity;
 import java.sql.Timestamp;
 import java.util.UUID;
 
@@ -42,7 +43,7 @@ public class BeerInventory extends BaseEntity{
         this.upc = upc;
         this.quantityOnHand = quantityOnHand;
     }
-
+    @Id
     private UUID beerId;
     private String upc;
     private Integer quantityOnHand = 0;
