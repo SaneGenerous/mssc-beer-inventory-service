@@ -16,13 +16,13 @@
  */
 package guru.sfg.beer.inventory.service.domain;
 
-import jakarta.persistence.Id;
+import javax.persistence.Id;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import jakarta.persistence.Entity;
+import javax.persistence.Entity;
 import java.sql.Timestamp;
 import java.util.UUID;
 
