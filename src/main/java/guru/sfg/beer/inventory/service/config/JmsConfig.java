@@ -11,8 +11,11 @@ import org.springframework.jms.support.converter.MessageType;
 public class JmsConfig {
 
     public static final String NEW_INVENTORY_QUEUE = "new-inventory";
+    public static final String ALLOCATED_ORDER_QUEUE = "allocated-order";
+    public static final String ALLOCATE_ORDER_RESPONSE_QUEUE = "allocate-order-response";
+    public static final String DEALLOCATE_ORDER_QUEUE = "deallocate-order";
 
-    @Bean
+    @Bean  // Serialize message content to Json  using TextMessage
     public MessageConverter jacksonJmsMessageCOnverter(ObjectMapper objectMapper){
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);
